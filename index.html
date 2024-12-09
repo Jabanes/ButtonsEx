@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <button id="b1" style="top: 0; position:absolute;">1</button>
+    <button id="b2" style="right: 0; position:absolute;">2</button>
+
+    <script>
+
+        let xPos = 10
+        delta = 10
+        function moveRight() {
+
+            xPos += delta
+            b2.style.right = `${xPos}px`
+
+            if (xPos > window.innerWidth) {
+                delta =-delta
+            }
+
+        }
+        setInterval(moveRight, 20)
+
+        let yPos = 10
+        delta = 10
+        function moveDown() {
+
+            yPos += delta
+            b1.style.top = `${yPos}px`
+
+            if (yPos > window.innerHeight) {
+                delta =-delta
+            }
+
+           
+        }
+
+
+
+        setInterval(moveDown, 20)
+
+
+    </script>
+
+
+</body>
+
+</html>
